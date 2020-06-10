@@ -22,6 +22,10 @@ Producing the embeddings is a two-step process: creating a co-occurrence matrix 
 
 There is also support for rudimentary pagragraph vectors. A paragraph vector (in this case) is an embedding of a paragraph (a multi-word piece of text) in the word vector space in such a way that the paragraph representation is close to the words it contains, adjusted for the frequency of words in the corpus (in a manner similar to tf-idf weighting). These can be obtained after having trained word embeddings by calling the `transform_paragraph` method on the trained model.
 
+### Loading Models
+Glove.load() for models trained using this library.
+Glove.load_standord() for the pre-trained models from http://nlp.stanford.edu/projects/glove/.
+
 ## Examples
 `example.py` has some example code for running simple training scripts: `ipython -i -- examples/example.py -c my_corpus.txt -t 10` should process your corpus, run 10 training epochs of GloVe, and drop you into an `ipython` shell where `glove.most_similar('physics')` should produce a list of similar words.
 
